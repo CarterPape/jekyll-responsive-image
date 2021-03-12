@@ -3,9 +3,11 @@ module Jekyll
     class Renderer
       include Jekyll::ResponsiveImage::Utils
 
-      def initialize(site, attributes)
+      def initialize(site, path, attributes)
         @site = site
+        @path = path
         @attributes = attributes
+        @attributes['path'] = @path
       end
 
       def render_responsive_image
@@ -15,7 +17,7 @@ module Jekyll
         result = use_cache ? RenderCache.get(cache_key) : nil
 
         if result.nil?
-          image = ImageProcessor.process(@attributes['path'], config)
+          image = ImageProcessor.process(@path, config)
           @attributes['original'] = image[:original]
           @attributes['resized'] = image[:resized]
 

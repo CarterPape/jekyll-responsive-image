@@ -3,6 +3,7 @@ require 'yaml'
 
 require 'jekyll'
 require 'rmagick'
+require 'jekyll-include-tag-parsing'
 
 require 'jekyll-responsive-image/version'
 require 'jekyll-responsive-image/config'
