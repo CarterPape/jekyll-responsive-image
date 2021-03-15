@@ -24,3 +24,18 @@ Gem::Specification.new do |spec|
     spec.add_dependency "rmagick"
     spec.add_dependency "jekyll-include-tag-parsing"
 end
+
+############################
+"""
+Required reading:
+
+https://cloudfour.com/thinks/responsive-images-101-part-8-css-images/#responsive-images-101-series
+https://codepen.io/tigt/post/when-responsive-images-get-ugly#printer-friendly-9
+https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/
+
+https://placeholder.com
+
+https://github.com/aFarkas/lazysizes
+https://blog.twitter.com/engineering/en_us/topics/infrastructure/2019/capping-image-fidelity-on-ultra-high-resolution-devices.html
+"""
+############################

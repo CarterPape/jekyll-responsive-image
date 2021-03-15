@@ -13,8 +13,8 @@ This plugin can be installed in three steps:
 
 Either add `jekyll-responsive-image` to your Gemfile, or run the following command to install the gem:
 
-```
-$ gem install jekyll-responsive-image
+```shell
+gem install jekyll-responsive-image
 ```
 
 Then you can either add `jekyll-responsive-image` to the `plugins` section of your `_config.yml`:
@@ -23,6 +23,7 @@ Then you can either add `jekyll-responsive-image` to the `plugins` section of yo
 plugins:
   - jekyll-responsive-image
 ```
+
 Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key instead of `plugins`.
 
 Or you can copy the contents of [`responsive_image.rb`](lib/jekyll-responsive-image.rb) into your `_plugins` directory.
@@ -98,7 +99,7 @@ The following variables are available in the template:
 | Variable   | Type          | Description                                                                                          |
 |------------|---------------|------------------------------------------------------------------------------------------------------|
 | `path`     | String        | The path of the unmodified image. This is always the same as the `path` attribute passed to the tag. |
-| `resized`  | Array<Object> | An array of all the resized images. Each image is an **Image Object**.                               |
+| `resized`  | Array\<Object\> | An array of all the resized images. Each image is an **Image Object**.                               |
 | `original` | Object        | An **Image Object** containing information about the original image.                                 |
 | `*`        | String        | Any other attributes will be passed to the template verbatim as strings (see below).                 |
 
@@ -200,15 +201,15 @@ responsive_image:
 
 `jekyll-responsive-image` uses `rmagick` which is currently incompatible with ImageMagick 7. If you get an error like:
 
-```
+```terminal
 Can't install RMagick 2.16.0. Can't find MagickWand.h
 ```
 
 Then you will need to install ImageMagick 6. If you are using Homebrew on Mac OS, this can be done with the following commands:
 
-```
-$ brew uninstall imagemagick
-$ brew install imagemagick@6 && brew link imagemagick@6 --force
+```sh
+brew uninstall imagemagick
+brew install imagemagick@6 && brew link imagemagick@6 --force
 ```
 
 ## Caching

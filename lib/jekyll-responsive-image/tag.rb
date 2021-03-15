@@ -1,7 +1,9 @@
 module Jekyll
     module ResponsiveImage
         class Tag < Liquid::Tag
+            # Helpful: https://rubular.com
             
+            # TODO: Extract all of these into Jekyll::IncludeLikeParsing
             VALID_SYNTAX = Jekyll::Tags::IncludeTag::VALID_SYNTAX.freeze
             VARIABLE_SYNTAX = Jekyll::Tags::IncludeTag::VARIABLE_SYNTAX.freeze
             
